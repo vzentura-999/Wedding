@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aswathi weds Vishnu | Shri Krishna (Guruvayur) Temple Themed Wedding Invitation</title>
+  <meta name="description" content="Join us in celebrating the sacred Shri Krishna (Guruvayur) temple wedding of Aswathi and Vishnu. Complete itinerary, ceremonies, and RSVP.">
+
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:title" content="Aswathi weds Vishnu | Shri Krishna Temple Wedding Invitation">
+  <meta property="og:description" content="With the divine grace of Lord Guruvayurappan, we cordially invite you to our wedding ceremonies.">
+  <meta property="og:image" content="assets/images/krishna_diorama_mandap.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Anek+Malayalam:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="krishna-theme">
+
+  <!-- Auspicious Falling Flower Petals Canvas -->
+  <canvas id="petalsCanvas" class="flower-petals-canvas" aria-hidden="true"></canvas>
+
+  <!-- Floating Audio Player Control -->
+  <div class="audio-control-wrap" id="audioWrap">
+    <button id="audioToggleBtn" class="audio-toggle-btn" aria-label="Toggle Wedding Song">
+      <div class="sound-wave">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <span class="audio-label">
+        <i class="fa-solid fa-music"></i>
+        <span id="audioStatusText">Wedding Song</span>
+      </span>
+    </button>
+  </div>
+
+  <!-- Background Audio Element with Downloaded YouTube Audio Track -->
+  <audio id="weddingAudio" loop preload="auto">
+    <source src="assets/audio/wedding_song.m4a" type="audio/mp4">
+    <source src="assets/audio/wedding_song.webm" type="audio/webm">
+  </audio>
+
+  <!-- MAIN PAGE WRAPPER -->
+  <div class="page-content-wrapper">
+
+    <!-- HERO SECTION (EXACT REFERENCE: BLUE SKY, GURUVAYUR KRISHNA TEMPLE & SACRED TYPOGRAPHY) -->
+    <header class="meenakshi-hero-section krishna-hero" id="hero">
+      <div class="sky-clouds-overlay"></div>
+      
+      <!-- Central Typography -->
+      <div class="hero-center-box">
+        <div class="sacred-ganesha-badge krishna-badge">
+          <span>🦚 ॐ നമോ ഭഗവതേ വാസുദേവായ ॐ 🦚</span>
+        </div>
+        
+        <h1 class="hero-groom-name">ASWATHI</h1>
+        <span class="hero-weds-script">weds</span>
+        <h1 class="hero-bride-name">VISHNU</h1>
+        
+        <p class="hero-getting-married">ARE GETTING MARRIED</p>
+
+        <div class="hero-date-ribbon">
+          <span><i class="fa-regular fa-calendar"></i> 25 OCTOBER 2026</span>
+          <span class="bullet">•</span>
+          <span><i class="fa-solid fa-place-of-worship"></i> GURUVAYUR SREE KRISHNA TEMPLE</span>
+        </div>
+      </div>
+
+      <!-- Bottom Gopuram Spire Horizon -->
+      <div class="hero-gopuram-bottom">
+        <img src="assets/images/meenakshi_hero_sky.jpg" alt="South Indian Temple Gopuram rising into sky" class="hero-gopuram-img">
+      </div>
+
+      <a href="#invite" class="scroll-down-arrow" aria-label="Scroll Down">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </header>
+
+    <!-- LIVE MUHURTHAM COUNTDOWN STRIP -->
+    <section class="muhurtham-strip-section">
+      <div class="container-content">
+        <div class="countdown-strip-card">
+          <div class="strip-header">
+            <span class="om-icon">🦚</span>
+            <h3>Auspicious Muhurtham Countdown</h3>
+            <p>Sunday, 25 Oct 2026 • 10:00 AM to 10:30 AM (Makayiram Nakshatram • Guruvayur Sannidhanam)</p>
+          </div>
+          <div class="strip-timer-grid">
+            <div class="strip-time-unit">
+              <span class="val" id="cdDays">00</span>
+              <span class="lbl">DAYS</span>
+            </div>
+            <div class="strip-time-unit">
+              <span class="val" id="cdHours">00</span>
+              <span class="lbl">HOURS</span>
+            </div>
+            <div class="strip-time-unit">
+              <span class="val" id="cdMinutes">00</span>
+              <span class="lbl">MINS</span>
+            </div>
+            <div class="strip-time-unit">
+              <span class="val" id="cdSeconds">00</span>
+              <span class="lbl">SECS</span>
+            </div>
+          </div>
+          <div class="strip-calendar-links">
+            <a id="addToGCalBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn-sm-gold">
+              <i class="fa-brands fa-google"></i> Add to Calendar
+            </a>
+            <button id="downloadIcsBtn" class="btn-sm-outline">
+              <i class="fa-solid fa-calendar-plus"></i> Apple / Outlook (.ics)
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE FORMAL "INVITE" SECTION (WARM SANDALWOOD GOLD PARCHMENT FLANKED BY PILLARS) -->
+    <section class="formal-invite-section" id="invite">
+      <div class="pillar-flank pillar-left" aria-hidden="true"></div>
+      <div class="pillar-flank pillar-right" aria-hidden="true"></div>
+      <div class="container-content">
+        <div class="invite-inner-content">
+          
+          <!-- Calligraphic Teal-Blue "Invite" Header from Reel -->
+          <h2 class="script-invite-title">Invite</h2>
+          
+          <p class="invite-blessing-intro">
+            With the divine grace of Lord Guruvayurappan and our beloved elders,<br>
+            we cordially request the honor of your presence and blessings
+          </p>
+
+          <div class="families-formal-box">
+            <div class="family-side">
+              <h4>Smt. Radhamani &amp; Sri. Gopala Krishna Pillai</h4>
+              <p>Krishna Vilasam, Tripunithura</p>
+            </div>
+            <div class="together-knot">
+              <span>together with</span>
+            </div>
+            <div class="family-side">
+              <h4>Smt. Lakshmi Amma &amp; Sri. Narayana Panicker</h4>
+              <p>Sree Nilayam, Thrissur</p>
+            </div>
+          </div>
+
+          <p class="invite-to-grace">
+            cordially invite you to grace the auspicious wedding ceremony of their beloved
+          </p>
+
+          <div class="formal-couple-names">
+            <h3>ASWATHI</h3>
+            <span class="amp">&amp;</span>
+            <h3>VISHNU</h3>
+          </div>
+
+          <div class="shloka-banner">
+            <p class="malayalam-shloka">"മാംഗല്യം തന്തുനാനേന ലോകരക്ഷാവിധായകം। കണ്ഠേ ബധ്നാമി ശുഭഗേ ത്വം ജീവ ശരദാം ശതം॥"</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ITINERARY & EVENTS SHOWCASE (EXACT REFERENCE: SLIDE 3 - GOPURAM SCULPTURES WALLPAPER BACKGROUND) -->
+    <section class="events-itinerary-section" id="events">
+      <div class="events-wallpaper-overlay"></div>
+      <div class="container-content">
+        <div class="section-title-wrap">
+          <span class="sub-tag">AUSPICIOUS SCHEDULE</span>
+          <h2 class="main-heading">Wedding Celebrations</h2>
+          <p class="heading-desc">Please join us for each sacred ceremony as we embark on this lifelong journey</p>
+        </div>
+
+        <div class="events-cards-stack">
+          <!-- Event 1: Nischayam / Mehendi & Sangeeth -->
+          <div class="event-horizontal-card">
+            <div class="event-card-media">
+              <img src="assets/images/mehendi_art.jpg" alt="Mehendi and Nischayam Ceremony" class="event-img">
+              <div class="event-media-badge">DAY 1</div>
+            </div>
+            <div class="event-card-body">
+              <h3 class="event-name">Mehendi &amp; Sangeeth Night</h3>
+              <div class="event-meta-row">
+                <span><i class="fa-regular fa-calendar"></i> 24 October 2026</span>
+                <span class="dot">•</span>
+                <span><i class="fa-regular fa-clock"></i> 06:00 PM</span>
+                <span class="dot">•</span>
+                <span><i class="fa-solid fa-location-dot"></i> Sopanam Hall</span>
+              </div>
+              <p class="event-blurb">
+                An evening of mehendi artistry, classical music recital, and family celebration.
+              </p>
+              <div class="event-card-actions">
+                <a href="https://maps.google.com/?q=Guruvayur+Temple+East+Nada" target="_blank" rel="noopener noreferrer" class="btn-pill-blue">
+                  View Location
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2: Main Ceremony - Thalikkettu Muhurtham -->
+          <div class="event-horizontal-card featured-event">
+            <div class="featured-ribbon">MAIN CEREMONY</div>
+            <div class="event-card-media">
+              <img src="assets/images/meenakshi_mandap.jpg" alt="Auspicious Thalikkettu Muhurtham" class="event-img">
+              <div class="event-media-badge golden">DAY 2 • MUHURTHAM</div>
+            </div>
+            <div class="event-card-body">
+              <h3 class="event-name">Thalikkettu Muhurtham</h3>
+              <div class="event-meta-row">
+                <span><i class="fa-regular fa-calendar"></i> 25 October 2026</span>
+                <span class="dot">•</span>
+                <span><i class="fa-regular fa-clock"></i> 10:00 AM - 10:30 AM</span>
+                <span class="dot">•</span>
+                <span><i class="fa-solid fa-place-of-worship"></i> Guruvayur Temple</span>
+              </div>
+              <p class="event-blurb">
+                The sacred Thalikkettu solemnization amidst resonant Nadaswaram, Chenda Melam, and exchange of Varmala garlands.
+              </p>
+              <div class="event-card-actions">
+                <a href="https://maps.google.com/?q=Guruvayur+Temple+East+Nada" target="_blank" rel="noopener noreferrer" class="btn-pill-blue">
+                  View Location
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3: Traditional Kalyana Sadhya -->
+          <div class="event-horizontal-card">
+            <div class="event-card-media">
+              <img src="assets/images/sadhya.jpg" alt="Traditional Kalyana Sadhya on Banana Leaf" class="event-img">
+              <div class="event-media-badge">FEAST</div>
+            </div>
+            <div class="event-card-body">
+              <h3 class="event-name">Traditional Kalyana Sadhya</h3>
+              <div class="event-meta-row">
+                <span><i class="fa-regular fa-calendar"></i> 25 October 2026</span>
+                <span class="dot">•</span>
+                <span><i class="fa-regular fa-clock"></i> 11:30 AM</span>
+                <span class="dot">•</span>
+                <span><i class="fa-solid fa-utensils"></i> Oottupura Hall</span>
+              </div>
+              <p class="event-blurb">
+                Grand 24-delicacy traditional feast on fresh plantain leaves served with melted ghee, Parippu, Avial, Olan, and Palada Pradhaman.
+              </p>
+              <div class="event-card-actions">
+                <a href="#sadhyaMenu" class="btn-pill-blue">
+                  View Sadhya Menu
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 4: Grand Reception -->
+          <div class="event-horizontal-card">
+            <div class="event-card-media">
+              <img src="assets/images/temple_corridor_arch.jpg" alt="Grand Reception and Dinner at Illuminated Temple Corridor" class="event-img">
+              <div class="event-media-badge">EVENING</div>
+            </div>
+            <div class="event-card-body">
+              <h3 class="event-name">Grand Reception &amp; Dinner</h3>
+              <div class="event-meta-row">
+                <span><i class="fa-regular fa-calendar"></i> 25 October 2026</span>
+                <span class="dot">•</span>
+                <span><i class="fa-regular fa-clock"></i> 06:30 PM</span>
+                <span class="dot">•</span>
+                <span><i class="fa-solid fa-hotel"></i> Grand Ballroom</span>
+              </div>
+              <p class="event-blurb">
+                An evening of music, felicitation, fellowship, and a lavish pan-Indian banquet dinner.
+              </p>
+              <div class="event-card-actions">
+                <a href="https://maps.google.com/?q=Thrissur+Kerala" target="_blank" rel="noopener noreferrer" class="btn-pill-blue">
+                  View Location
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SACRED THALIKKETTU CEREMONY SECTION (EXACT USER IMAGE 1) -->
+    <section class="mandap-ceremony-section" id="varmala">
+      <div class="container-content">
+        <div class="mandap-artwork-card thalikkettu-moment-card">
+          <div class="thalikkettu-frame">
+            <img src="assets/images/kerala_thalikkettu_moment.jpg" alt="Sacred Thalikkettu Ceremony before Lord Sree Krishna" class="thalikkettu-img">
+          </div>
+          <div class="mandap-quote-overlay">
+            <span class="diorama-tag">🦚 മാംഗല്യധാരണം • THE SACRED UNION 🦚</span>
+            <h3>Sacred Thalikkettu before Lord Sree Krishna</h3>
+            <div class="thalikkettu-time-ribbon">
+              <i class="fa-regular fa-clock"></i> Muhurtham: 10:00 AM to 10:30 AM
+            </div>
+            <p>"The auspicious moment of tying the sacred Thali amidst resonant Kurava, Nadaswaram, and the heartfelt blessings of our beloved elders."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE GOLDEN PROMISE (സുവർണ്ണ പ്രതിജ്ഞ) INVITATION CARD SECTION -->
+    <section class="golden-promise-section" id="promise">
+      <div class="container-content">
+        
+        <div class="golden-promise-card">
+          <!-- Decorative Corner Flourishes -->
+          <div class="corner-flourish top-left"></div>
+          <div class="corner-flourish top-right"></div>
+          <div class="corner-flourish bottom-left"></div>
+          <div class="corner-flourish bottom-right"></div>
+
+          <!-- Card Header & Auspicious Emblem -->
+          <div class="promise-header">
+            <div class="promise-crest">
+              <span class="feather-icon">🪶</span>
+              <span class="om-crest">ॐ</span>
+              <span class="peacock-icon">🦚</span>
+            </div>
+            <div class="promise-badge">THE GOLDEN PROMISE • സുവർണ്ണ പ്രതിജ്ഞ</div>
+            <h2 class="promise-main-title">Our Sacred Vows of Eternity</h2>
+            <p class="promise-sub-lead">
+              "Bound by timeless devotion and blessed at the sanctum of Lord Guruvayurappan, we take these sacred steps into our shared forever."
+            </p>
+          </div>
+
+          <!-- Ornate Gold Divider -->
+          <div class="promise-ornate-divider">
+            <span class="divider-line"></span>
+            <span class="divider-lotus">🪷</span>
+            <span class="divider-line"></span>
+          </div>
+
+          <!-- The Four Pillars of the Golden Promise -->
+          <div class="promise-pillars-grid">
+            
+            <!-- Pillar 1 -->
+            <div class="pillar-card">
+              <div class="pillar-icon-box">
+                <i class="fa-solid fa-hands-praying"></i>
+              </div>
+              <span class="pillar-malayalam">ധർമ്മപാലനം</span>
+              <h3 class="pillar-title">Dharma &amp; Faith</h3>
+              <p class="pillar-text">
+                To walk hand-in-hand in righteousness, honoring our sacred traditions, cherishing our families, and keeping unwavering faith in the grace of Lord Guruvayurappan.
+              </p>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="pillar-card">
+              <div class="pillar-icon-box">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <span class="pillar-malayalam">നിസ്വാർത്ഥ സ്നേഹം</span>
+              <h3 class="pillar-title">Enduring Love &amp; Grace</h3>
+              <p class="pillar-text">
+                To love one another unconditionally through every season of life, offering patience, kindness, comfort, and unwavering devotion in thought, word, and deed.
+              </p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="pillar-card">
+              <div class="pillar-icon-box">
+                <i class="fa-solid fa-feather-pointed"></i>
+              </div>
+              <span class="pillar-malayalam">നിത്യ സൗഹൃദം</span>
+              <h3 class="pillar-title">Soul Companionship</h3>
+              <p class="pillar-text">
+                To be each other’s truest confidant, warmest sanctuary, and lifelong best friend—sharing dreams, weathering storms, and celebrating every joy together.
+              </p>
+            </div>
+
+            <!-- Pillar 4 -->
+            <div class="pillar-card">
+              <div class="pillar-icon-box">
+                <i class="fa-solid fa-sun"></i>
+              </div>
+              <span class="pillar-malayalam">ഐശ്വര്യ സമൃദ്ധി</span>
+              <h3 class="pillar-title">Harmony &amp; Abundance</h3>
+              <p class="pillar-text">
+                To nurture our home with warmth, hospitality, laughter, and spiritual peace, welcoming every tomorrow with gratitude, optimism, and an open heart.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Solemn Pledge Quote -->
+          <div class="promise-quote-box">
+            <p class="promise-quote-body">
+              "Before the sacred fire, before our beloved elders, and under the benevolent gaze of Lord Sree Krishna, our hearts unite in a promise that time itself cannot diminish."
+            </p>
+          </div>
+
+          <!-- Royal Wax Seal & Signatures Block -->
+          <div class="promise-signature-block">
+            <div class="signature-column bride">
+              <span class="sig-label">THE BRIDE</span>
+              <span class="sig-name">Aswathi</span>
+            </div>
+
+            <div class="promise-wax-seal">
+              <div class="seal-inner">
+                <span class="seal-symbol">🦚</span>
+                <span class="seal-monogram">A &amp; V</span>
+                <span class="seal-date">25.10.2026</span>
+              </div>
+            </div>
+
+            <div class="signature-column groom">
+              <span class="sig-label">THE GROOM</span>
+              <span class="sig-name">Vishnu</span>
+            </div>
+          </div>
+
+          <!-- Bottom Auspicious Ribbon -->
+          <div class="promise-location-ribbon">
+            <span><i class="fa-solid fa-place-of-worship"></i> Sree Krishna Temple Sannidhanam, Guruvayur</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GOLDEN TEMPLE CORRIDOR ARCH RSVP SECTION (EXACT USER IMAGE 2) -->
+    <section class="will-you-join-section krishna-rsvp-section" id="rsvp">
+      <div class="krishna-arch-container">
+        
+        <div class="temple-corridor-rsvp-card">
+          <!-- Ambient lighting & vignette backdrop overlay -->
+          <div class="corridor-card-backdrop"></div>
+
+          <!-- Inside the Arch: Invitation Card -->
+          <div class="scalloped-arch-content-overlay">
+            <div class="arch-invitation-badge">
+              <span class="om-tag">വക്രതുണ്ഡ മഹാകായ സൂര്യകോടി സമപ്രഭ । നിർവിഘ്നം കുരു മേ ദേവ സർവ്വകാര്യേഷു സർവ്വദാ ॥</span>
+              <h2 class="will-you-title">Will You Join Us?</h2>
+              <p class="will-you-sub">
+                Your presence, prayers, and blessings are our most cherished gifts as we begin our new life before Lord Guruvayurappan.
+              </p>
+            </div>
+
+            <!-- WhatsApp RSVP CTA with updated phone -->
+            <div class="whatsapp-rsvp-cta">
+              <a id="shareWhatsappBtn" href="https://wa.me/919995190229?text=Namaskaram!%20I%20will%20be%20attending%20Aswathi%20%26%20Vishnu's%20Wedding%20at%20Guruvayur%20Temple." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-red">
+                <i class="fa-brands fa-whatsapp"></i> RSVP on WhatsApp
+              </a>
+            </div>
+
+            <!-- Interactive Attendance Form -->
+            <form id="weddingRsvpForm" class="clean-rsvp-form arch-embedded-form">
+              <div class="form-grid-2">
+                <input type="text" id="guestName" required placeholder="Your Full Name(s) *">
+                <input type="tel" id="guestPhone" required placeholder="WhatsApp Phone *">
+              </div>
+              <div class="form-grid-2">
+                <select id="guestCount" required>
+                  <option value="1">1 Person</option>
+                  <option value="2" selected>2 Persons</option>
+                  <option value="3">3 Persons</option>
+                  <option value="4+">4+ Family Members</option>
+                </select>
+                <select id="guestAttendance" required>
+                  <option value="Joyfully Attending" selected>Joyfully Attending</option>
+                  <option value="Regretfully Cannot Attend">Sending Blessings from Afar</option>
+                </select>
+              </div>
+              <textarea id="guestBlessing" rows="2" placeholder="Send a heartfelt prayer or blessing for Aswathi & Vishnu..."></textarea>
+              
+              <button type="submit" class="btn-submit-guest">
+                <i class="fa-solid fa-paper-plane"></i> Submit RSVP &amp; Post Blessing
+              </button>
+
+              <div id="rsvpSuccessMsg" class="rsvp-success-msg hidden">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Thank you! Your RSVP and blessings have been received with love.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- LIVE GUEST BLESSINGS WALL -->
+    <section class="blessings-wall-section">
+      <div class="container-content">
+        <div class="blessings-wall-card">
+          <div class="wall-title-bar">
+            <h3><i class="fa-solid fa-hands-praying"></i> Guest Blessings &amp; Wishes</h3>
+            <span class="badge" id="blessingCountBadge">4 Blessings</span>
+          </div>
+          <div class="blessings-scroll-box" id="blessingsList">
+            <div class="b-card">
+              <strong>Unnikrishnan &amp; Geetha</strong>
+              <p>"May Lord Guruvayurappan shower his divine grace on both of you. Wishing you a lifetime of joy!"</p>
+              <small>🌸 മംഗളങ്ങൾ</small>
+            </div>
+            <div class="b-card">
+              <strong>Dr. Arvind &amp; Lakshmi Menon</strong>
+              <p>"Heartiest congratulations to Aswathi and Vishnu! Excited to celebrate with everyone in Guruvayur."</p>
+              <small>🌼 ശുഭ വിവാഹം</small>
+            </div>
+            <div class="b-card">
+              <strong>Meera &amp; Rahul Nair</strong>
+              <p>"You two are truly made for each other. Wishing you eternal love and laughter!"</p>
+              <small>🌸 അനുഗ്രഹങ്ങൾ</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="meenakshi-footer krishna-footer">
+      <div class="container-content">
+        <div class="footer-center">
+          <p class="footer-shloka">"വക്രതുണ്ഡ മഹാകായ സൂര്യകോടി സമപ്രഭ ।<br>നിർവിഘ്നം കുരു മേ ദേവ സർവ്വകാര്യേഷു സർവ്വദാ ॥"</p>
+          <h2>Aswathi &amp; Vishnu</h2>
+          <p class="footer-tagline">Shri Krishna (Guruvayur) Temple Themed Wedding Celebrations • Guruvayur 2026</p>
+          <div class="footer-contacts">
+            <p><i class="fa-solid fa-phone"></i> +91 99951 90229 | +91 91108 15114</p>
+            <p><i class="fa-solid fa-envelope"></i> connect.vzentura@gmail.com</p>
+          </div>
+          <p class="copyright">© 2026 Aswathi &amp; Vishnu. With the divine grace of Lord Sree Krishna Guruvayurappan.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
